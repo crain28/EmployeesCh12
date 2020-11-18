@@ -21,7 +21,7 @@ namespace EmployeesCh12.Data
         {
             //Composite key
             modelBuilder.Entity<DepartmentLocation>().HasKey(d => new { d.DepartmentID, d.LocationID });
-            // one to many relationship Department and DepartmentLocation
+            // one to many 
             modelBuilder.Entity<DepartmentLocation>().HasOne(d1 => d1.Department)
                 .WithMany(d => d.DepartmentLocations).HasForeignKey(d1 => d1.DepartmentID);
             // one to many 
